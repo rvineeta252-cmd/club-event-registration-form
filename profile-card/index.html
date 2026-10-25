@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Cards</title>
+
+    <style>
+        /* Basic Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0ff;
+            color: #333;
+            padding-bottom: 80px;
+        }
+
+        /* Sticky Top Bar */
+        .top-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #6c3fc5;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Profile Container */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            width: 300px;
+            padding: 25px;
+            margin: 10px;
+            border: 3px solid #8b5cf6;
+            border-radius: 20px;
+            background-color: white;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Second Colour Version */
+        .profile-card.green {
+            border-color: #159a80;
+            background-color: #f0fff9;
+        }
+
+        /* Round Avatar */
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid #8b5cf6;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .green .avatar {
+            border-color: #159a80;
+        }
+
+        /* Profile Heading */
+        .profile-card h2 {
+            margin-bottom: 8px;
+            color: #6c3fc5;
+        }
+
+        .profile-card.green h2 {
+            color: #13866f;
+        }
+
+        .role {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        /* Scrollable Bio Box */
+        .bio {
+            height: 110px;
+            overflow: auto;
+            padding: 12px;
+            margin-top: 15px;
+            border: 1px solid #d8c9f7;
+            border-radius: 10px;
+            background-color: #faf7ff;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .green .bio {
+            border-color: #a6dfcf;
+            background-color: #e8fff6;
+        }
+
+        /* Profile Button */
+        .profile-btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #6c3fc5;
+            color: white;
+            cursor: pointer;
+        }
+
+        .green .profile-btn {
+            background-color: #159a80;
+        }
+
+        /* Fixed Floating + Button */
+        .add-btn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 2000;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            background-color: #ff6b81;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .add-btn:hover {
+            background-color: #e94d68;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 20px 10px;
+                gap: 15px;
+            }
+
+            .profile-card {
+                width: 100%;
+                max-width: 330px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Top Bar -->
+    <header class="top-bar">
+        My Profile Cards
+    </header>
+
+    <!-- Profile Cards -->
+    <main class="profile-container">
+
+        <!-- Purple Profile Card -->
+        <section class="profile-card">
+            <img
+                class="avatar"
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                alt="Profile avatar">
+
+            <h2>Veda Verma</h2>
+            <p class="role">Web Developer</p>
+
+            <div class="bio">
+                Hello! I am veda, a passionate web developer who
+                loves creating beautiful and responsive websites.
+                I enjoy learning HTML, CSS, JavaScript and new
+                technologies. My goal is to build user-friendly
+                websites and creative digital experiences.
+                I also enjoy reading, designing and exploring
+                new ideas in technology.
+            </div>
+
+            <button class="profile-btn">View Profile</button>
+        </section>
+
+        <!-- Green Profile Card -->
+        <section class="profile-card green">
+            <img
+                class="avatar"
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                alt="Profile avatar">
+
+            <h2>Alex Carter</h2>
+            <p class="role">UI/UX Designer</p>
+
+            <div class="bio">
+                Hi! I am Alex, a creative UI/UX designer who loves
+                designing simple and attractive user interfaces.
+                I enjoy working with colours, layouts and typography.
+                I am always excited to learn new design tools
+                and improve my skills. My aim is to create
+                digital experiences that are both beautiful
+                and easy to use.
+            </div>
+
+            <button class="profile-btn">View Profile</button>
+        </section>
+
+    </main>
+
+    <!-- Fixed Floating Button -->
+    <button class="add-btn" aria-label="Add profile">+</button>
+
+</body>
+</html>

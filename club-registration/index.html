@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title> Club Registration
+
+        </title>
+        <!--Google Font--> 
+        <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+        <link rel="https://fonts.gstatic.com"
+        crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins;wght@400;500;600;700&display=swap" rel="stylesheet">
+        <!--CSS Styling-->
+        <style>/*5.4:CSS Variables */:root{
+            --primary-color:#6c63ff;
+            --secondary-color: #f0eff;
+            --background-color: #f8f9ff;
+            --card-color: #ffffff;
+            --text-color: #252542;
+            --muted-color: #6b7280;
+            --border-color: #e5e7eb;
+            --spacing: 20px;
+            --border-radius:12px;
+
+
+        }
+/*5.2: Universal Selector */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*5.3:Fonts, Colours, Font Size and Line height */
+body {
+    font-family:'Poppins',sans-serif; 
+    background-color:
+    var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line height: 1.6;
+
+}
+/*Element Selector */
+h1{
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+
+}
+h2{
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+p{
+    color:var(--muted-color);
+
+}
+/* ID Selector */
+#hero {
+    background:linear-gradient(135deg,#6c63ff, #928cff);
+    color:white;
+    text-align: center;
+    padding: 55px 20px;
+
+}
+#hero p {
+    color: #f0eff;
+    margin-top: 10px;
+}
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 0 var(--spacing);
+}
+/* Class Selector */
+.card {
+    background-color: var(--card-color);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: var(--border-radius);
+    border: 1px slid var(--border-color);
+    box-shadow: 0 5px 20px rgba (37,37,66,0.06);
+
+}
+.card h2{
+    color: var(--primary-color);
+}
+/* Club Information */
+.club-info {
+    margin-bottom: 15px;
+}
+label{
+    display:block;
+    font-weight:500;
+    margin-bottom:6px;
+
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding:12px;
+    font-family:inherit;
+    font-size:14px;
+    border: 1px slid var(--border-color);
+    border-radius: 8px;
+    outline:none;
+}
+input:focus,
+select:focus,
+textarea:focus{
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--secondary-color);
+
+}
+textarea{
+    resize: vertical;
+}
+button{
+    width: 100%;
+    padding: 13px;
+    background-color: var( --primary-color);
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+button:hover {
+    background-color: #5148e5;
+
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--text-color);
+    font-size: 14px;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1{
+        font-size: 1.7rem;
+
+    }
+    .card{
+        padding: 20px;
+    }
+}
+</style>
+</head>
+<body>
+    <!--Hero Section-->
+    <header id="hero">
+        <h1>Welcome to Our Club</h1>
+        <p> Learn, Connect, Create and Grow Together!</p>
+        </header>
+        <main class="container">
+            <!--About Club-->
+            <section class="card">
+                <h2>About Our Club</h2>
+                <p class="club-info">
+                    Our club is a place where students can explore their interests,
+                    develop new skills, share ideas and work together on exciting projects.
+                    </p>
+                    <p>
+  Join us to learn new things, participate in activities and connect with like-minded students.
+              </p>
+            </section>
+            <!--Club Activities-->
+            <section class="card">
+                <h2>Our Activities</h2>
+                <p> Coding and Web Development</p>
+                <p>Creative Design and Innovation</p>
+                <p>Teamwork and Group Projects</p>
+                <p>Workshops and Competitions</p>
+
+            </section>
+            <!--Registration Form-->
+            <section class="card">
+                <h2>Club Registration</h2>
+                <p> Fill in the details below to join our club.</p>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name"
+                        placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email"
+                        placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <input type="text" id="course" name="course"
+                            placeholder="e.g. B.Tech CSE">
+                            </div>
+                            <div class="form-group">
+                                <label for="club">Choose Your Club</label>
+                                <select id="club" name="club" required>
+                                    <option value="">Select a club</option>
+                                    <option value="coding">Coding Club</option>
+                                    <option value="design">Design Club</option>
+                                    <option value="cultural">Cultural Club</option>
+                                    <option value="sports"> Sports Club</option>
+                                    </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reason"> Why do you want to join?</label>
+                                        <textarea id="reason" name="reason" rows="4" placeholder="Tell us about your interests"></textarea>
+                                        </div>
+                                        <button type="submit">Register Now</button>
+                                        </form>
+                                        </section>
+                                        </main>
+                                        <footer>
+                                            <p>&copy; 2026 Our Club. All rights reserved.</p>
+                                            
+                                        </footer>
+                                    </div>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </header>
+</body>
+    </head>
+</html>
